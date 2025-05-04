@@ -21,13 +21,21 @@ function GamePage() {
   const [showNewGame, setShowNewGame] = useState(false);
 
   useEffect(() => {
-    setTarget(generateRandomNumber(min, max));
-    setGuessesLeft(maxGuesses);
+    const storedMin = parseInt(localStorage.getItem('min') || '1');
+    const storedMax = parseInt(localStorage.getItem('max') || '100');
+    const storedMaxGuesses = parseInt(localStorage.getItem('maxGuesses') || '5');
+
+    setMin(storedMin);
+    setMax(storedMax);
+    setMaxGuesses(storedMaxGuesses);
+
+    setTarget(generateRandomNumber(storedMin, storedMax));
+    setGuessesLeft(storedMaxGuesses);
     setFeedback('');
     setGameOver(false);
     setShowNewGame(false);
     setGuess('');
-  }, [min, max, maxGuesses]);
+  }, []);
 
   const handleGuess = () => {
     if (gameOver || guess === '') return;
@@ -64,8 +72,15 @@ function GamePage() {
   };
 
   const startNewGame = () => {
-    setTarget(generateRandomNumber(min, max));
-    setGuessesLeft(maxGuesses);
+    const storedMin = parseInt(localStorage.getItem('min') || '1');
+    const storedMax = parseInt(localStorage.getItem('max') || '100');
+    const storedMaxGuesses = parseInt(localStorage.getItem('maxGuesses') || '5');
+
+    setMin(storedMin);
+    setMax(storedMax);
+    setMaxGuesses(storedMaxGuesses);
+    setTarget(generateRandomNumber(storedMin, storedMax));
+    setGuessesLeft(storedMaxGuesses);
     setFeedback('');
     setGameOver(false);
     setShowNewGame(false);
