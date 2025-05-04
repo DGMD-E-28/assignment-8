@@ -61,10 +61,8 @@ Once the base requirements were met, the following enhancements were implemented
 - **Theme Toggle**: Allows users to switch between Harvard mode and Dark mode with a simple icon-based toggle.
 - **Persistent Settings**: User-selected range and max guesses are saved using `localStorage` and persist across sessions.
 - **Responsive Design**: Game UI and navigation adapt to different screen sizes.
-- **Animated Feedback**: Status messages animate on display for improved user experience.
 - **Keyboard Accessibility**: Users can press Enter to submit a guess without clicking the button.
 - **Statistics Reset**: Players can clear their stats on the stats page.
-- **Active Navigation Highlighting**: The current page is visually distinguished in the top nav bar.
 
 
 ## 📆 Project Info
