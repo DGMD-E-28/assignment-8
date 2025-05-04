@@ -203,7 +203,7 @@ h1 {
 
 .settings-container h1 {
     margin-bottom: 1.5rem;
-    color: var(--text-color);
+    color: var(--square-border-color);
 }
 
 .settings-field {
