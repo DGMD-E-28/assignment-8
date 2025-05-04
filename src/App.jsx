@@ -24,7 +24,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <Router>
+    <Router basename="/assignment-8">
       <nav className="main-nav">
         <Link to="/">Game</Link>
         <Link to="/settings">Settings</Link>
