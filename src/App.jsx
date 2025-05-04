@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/styles.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import GamePage from './pages/GamePage';
 import SettingsPage from './pages/SettingsPage';
 import StatsPage from './pages/StatsPage';
@@ -24,7 +24,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <Router basename="/assignment-8">
+    <Router>
       <nav className="main-nav">
         <Link to="/">Game</Link>
         <Link to="/settings">Settings</Link>
