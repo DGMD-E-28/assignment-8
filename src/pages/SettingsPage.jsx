@@ -22,35 +22,32 @@ function SettingsPage() {
   };
 
   return (
-    <div>
+    <div className="settings-container">
       <h1>Game Settings</h1>
-      <label>
-        Minimum Number:
+      <div className="settings-field">
+        <label>Minimum Number:</label>
         <input
           type="number"
           value={min}
           onChange={(e) => setMin(parseInt(e.target.value))}
         />
-      </label>
-      <br />
-      <label>
-        Maximum Number:
+      </div>
+      <div className="settings-field">
+        <label>Maximum Number:</label>
         <input
           type="number"
           value={max}
           onChange={(e) => setMax(parseInt(e.target.value))}
         />
-      </label>
-      <br />
-      <label>
-        Max Guesses:
+      </div>
+      <div className="settings-field">
+        <label>Max Guesses:</label>
         <input
           type="number"
           value={maxGuesses}
           onChange={(e) => setMaxGuesses(parseInt(e.target.value))}
         />
-      </label>
-      <br />
+      </div>
       <button onClick={handleSave}>Save Settings</button>
     </div>
   );

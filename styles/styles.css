@@ -95,42 +95,6 @@ body {
     user-select: none;
 }
 
-.theme-switch input[type="checkbox"] {
-    width: 36px;
-    height: 20px;
-    accent-color: var(--link-color);
-    margin: 0;
-    vertical-align: middle;
-}
-
-
-.theme-switch input[type="range"] {
-    -webkit-appearance: none;
-    width: 50px;
-    height: 10px;
-    background: #ccc;
-    border-radius: 5px;
-    outline: none;
-    transition: background 0.3s;
-}
-
-
-.theme-switch input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 8px;
-    height: 20px;
-    background: var(--link-color);
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-
-body.dark-mode .theme-switch input[type="range"],
-body.harvard-mode .theme-switch input[type="range"] {
-    background: var(--bg-color);
-}
-
 
 .main-nav a {
     display: inline-block;
@@ -208,4 +172,67 @@ button:hover {
     background-color: var(--link-hover-color);
     border: 2px solid white;
     box-shadow: 0 0 5px white;
+}
+
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--link-color);
+}
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--link-color);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.settings-container h1 {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.settings-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: left;
+    color: white;
+}
+
+.settings-field label {
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+.settings-field input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    font-size: 1rem;
+}
+
+.settings-container button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    cursor: pointer;
 }

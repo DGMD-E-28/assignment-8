@@ -36,9 +36,9 @@ function App() {
         </a>
       </div>
       <Routes>
-        <Route path="/" element={<GamePage />} />
-        <Route path="/settings" element={<SettingsPage />} />
-        <Route path="/stats" element={<StatsPage />} />
+        <Route path="/" element={<div className="page-container"><GamePage /></div>} />
+        <Route path="/settings" element={<div className="page-container"><SettingsPage /></div>} />
+        <Route path="/stats" element={<div className="page-container"><StatsPage /></div>} />
       </Routes>
     </Router>
   );

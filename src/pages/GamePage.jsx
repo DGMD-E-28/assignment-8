@@ -91,12 +91,14 @@ function GamePage() {
     <div>
       <h1>Guess the Number</h1>
       <p>Guess a number between {min} and {max}. You have {guessesLeft} guess{guessesLeft !== 1 ? 'es' : ''} left.</p>
-      <GuessInput
-        guess={guess}
-        onGuessChange={setGuess}
-        onSubmit={handleGuess}
-        disabled={gameOver}
-      />
+      <div className="page-container">
+        <GuessInput
+          guess={guess}
+          onGuessChange={setGuess}
+          onSubmit={handleGuess}
+          disabled={gameOver}
+        />
+      </div>
       <div>
         <FeedbackMessage message={feedback} />
       </div>
