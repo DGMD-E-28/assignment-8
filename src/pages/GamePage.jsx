@@ -41,6 +41,11 @@ function GamePage() {
     if (gameOver || guess === '') return;
     const numGuess = parseInt(guess, 10);
 
+    if (isNaN(numGuess) || numGuess < min || numGuess > max) {
+      setFeedback(`Please enter a number between ${min} and ${max}.`);
+      return;
+    }
+
     if (numGuess === target) {
       setFeedback('🎉 Congratulations! You guessed it!');
       updateStats(maxGuesses - guessesLeft + 1);
